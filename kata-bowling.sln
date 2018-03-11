@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kata-bowling", "src\kata-bowling\kata-bowling.csproj", "{B245071B-DDE9-4055-8D7E-3FC46D0DB4FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{899739EB-BCAE-4B7F-99AB-3920DF262624}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9F833E1F-1D52-43F6-ABA0-D573968BBAFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kata-bowling.tests", "test\kata-bowling.tests\kata-bowling.tests.csproj", "{4B3275EB-F865-4152-BACC-D8BD787DB8F8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{03DDF00F-61BE-4FF5-9E03-A0476A2522ED}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B245071B-DDE9-4055-8D7E-3FC46D0DB4FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B245071B-DDE9-4055-8D7E-3FC46D0DB4FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B245071B-DDE9-4055-8D7E-3FC46D0DB4FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B245071B-DDE9-4055-8D7E-3FC46D0DB4FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B3275EB-F865-4152-BACC-D8BD787DB8F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B3275EB-F865-4152-BACC-D8BD787DB8F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B3275EB-F865-4152-BACC-D8BD787DB8F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B3275EB-F865-4152-BACC-D8BD787DB8F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B245071B-DDE9-4055-8D7E-3FC46D0DB4FA} = {899739EB-BCAE-4B7F-99AB-3920DF262624}
+		{4B3275EB-F865-4152-BACC-D8BD787DB8F8} = {9F833E1F-1D52-43F6-ABA0-D573968BBAFE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31A6114A-7BF7-469B-BE2F-80DC354D87BC}
+	EndGlobalSection
+EndGlobal
