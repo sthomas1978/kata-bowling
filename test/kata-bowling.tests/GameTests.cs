@@ -31,7 +31,7 @@ namespace kata_bowling.tests
                 .ToList()
                 .ForEach(roll =>
                 {
-                    game.Roll(0);
+                    game.Roll(1);
                 });
 
             Assert.Equal(20, game.Score());
