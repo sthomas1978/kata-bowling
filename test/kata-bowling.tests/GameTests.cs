@@ -21,5 +21,21 @@ namespace kata_bowling.tests
 
             Assert.Equal(0, game.Score());
         }
+
+        [Fact]
+        public void Score_RollAllOnes_Returns20()
+        {
+            var game = new Game();
+
+            Enumerable.Range(0, 20)
+                .ToList()
+                .ForEach(roll =>
+                {
+                    game.Roll(0);
+                });
+
+            Assert.Equal(20, game.Score());
+        }
+
     }
 }
