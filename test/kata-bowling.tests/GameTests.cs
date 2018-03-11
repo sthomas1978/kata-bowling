@@ -49,6 +49,18 @@ namespace kata_bowling.tests
             Assert.Equal(16, _game.Score());
         }
 
+        [Fact]
+        public void Score_RollAStrike_ReturnsCorrectScore()
+        {
+            _game.Roll(10); //strike
+            _game.Roll(3);
+            _game.Roll(4);
+
+            RollMany(16, 0);
+
+            Assert.Equal(24, _game.Score());
+        }
+
         private void RollSpare()
         {
             _game.Roll(5);
