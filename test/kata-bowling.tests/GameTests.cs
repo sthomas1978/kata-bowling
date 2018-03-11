@@ -52,7 +52,7 @@ namespace kata_bowling.tests
         [Fact]
         public void Score_RollAStrike_ReturnsCorrectScore()
         {
-            _game.Roll(10); //strike
+            RollStrike();
             _game.Roll(3);
             _game.Roll(4);
 
@@ -61,10 +61,24 @@ namespace kata_bowling.tests
             Assert.Equal(24, _game.Score());
         }
 
+        private void RollStrike()
+        {
+            _game.Roll(10);
+        }
+
+        [Fact]
+        public void Score_AllStrikes_ReturnsPerfectScore()
+        {
+            RollMany(12, 10);
+
+            Assert.Equal(300, _game.Score());
+        }
+
+
         private void RollSpare()
         {
             _game.Roll(5);
-            _game.Roll(5); // we have spare here;
+            _game.Roll(5);
         }
     }
 }
