@@ -7,34 +7,35 @@ namespace kata_bowling.tests
 {
     public class GameTests
     {
-        [Fact]
-        public void Score_GutterGame_ReturnsZero()
-        {
-            var game = new Game();
+        private readonly Game _game;
 
-            Enumerable.Range(0, 20)
+        public GameTests()
+        {
+            _game = new Game();
+        }
+
+        private void RollMany(int rolls, int pins)
+        {
+            Enumerable.Range(0, rolls)
                 .ToList()
                 .ForEach(roll =>
                 {
-                    game.Roll(0);
+                    _game.Roll(pins);
                 });
+        }
 
-            Assert.Equal(0, game.Score());
+        [Fact]
+        public void Score_GutterGame_ReturnsZero()
+        {
+            RollMany(20, 0);
+            Assert.Equal(0, _game.Score());
         }
 
         [Fact]
         public void Score_RollAllOnes_Returns20()
         {
-            var game = new Game();
-
-            Enumerable.Range(0, 20)
-                .ToList()
-                .ForEach(roll =>
-                {
-                    game.Roll(1);
-                });
-
-            Assert.Equal(20, game.Score());
+            RollMany(20, 1);
+            Assert.Equal(20, _game.Score());
         }
 
     }
