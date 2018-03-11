@@ -1,17 +1,20 @@
-﻿namespace kata.bowling
+﻿using System.Linq;
+
+namespace kata.bowling
 {
     public class Game
     {
-        private int _score = 0;
+        private int currentRoll = 0;
+        private int[] rolls = new int[21];
 
         public void Roll(int pins)
         {
-            _score += pins;
+            rolls[currentRoll++] = pins;
         }
 
         public int Score()
         {
-            return _score;
+            return rolls.ToList().Sum();
         }
 
     }
