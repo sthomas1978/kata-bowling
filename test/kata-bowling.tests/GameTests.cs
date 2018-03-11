@@ -41,13 +41,18 @@ namespace kata_bowling.tests
         [Fact]
         public void Score_RollsASpare_ReturnsCorrectScore()
         {
-            _game.Roll(5);
-            _game.Roll(5); // we have spare here;
+            RollSpare();
             _game.Roll(3);
 
             RollMany(17, 0);
 
             Assert.Equal(16, _game.Score());
+        }
+
+        private void RollSpare()
+        {
+            _game.Roll(5);
+            _game.Roll(5); // we have spare here;
         }
     }
 }
