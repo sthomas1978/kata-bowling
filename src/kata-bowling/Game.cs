@@ -20,20 +20,37 @@ namespace kata.bowling
             {
                 if (IsSpare(frameIndex))
                 {
-                    score += 10 + rolls[frameIndex + 2];
+                    score += SpareBonus(frameIndex);
                     frameIndex += 2;
                 }
-                else if (rolls[frameIndex] == 10)
+                else if (IsStrike(frameIndex))
                 {
-                    score += 10 + rolls[frameIndex + 1] + rolls[frameIndex + 2];
+                    score += StrikeBonus(frameIndex);
                     frameIndex++;
-                } else {
+                }
+                else
+                {
                     score += rolls[frameIndex] + rolls[frameIndex + 1];
                     frameIndex += 2;
                 }
             }
 
             return score;
+        }
+
+        private int StrikeBonus(int frameIndex)
+        {
+            return 10 + rolls[frameIndex + 1] + rolls[frameIndex + 2];
+        }
+
+        private int SpareBonus(int frameIndex)
+        {
+            return 10 + rolls[frameIndex + 2];
+        }
+
+        private bool IsStrike(int frameIndex)
+        {
+            return rolls[frameIndex] == 10;
         }
 
         private bool IsSpare(int frameIndex)
